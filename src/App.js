@@ -28,7 +28,7 @@ function App() {
 
   function editTodo(id, updatedTodo) {
     // IMPLEMENT EDIT TODO
-    debugger
+    
     const index = todos.findIndex(item => item.id === id)
     todos[index] = updatedTodo; 
 
