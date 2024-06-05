@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Task Manager</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <section class="vh-100 gradient-custom-2">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-md-12 col-xl-11">
+    
+            <div class="card mask-custom">
+              <div class="card-body p-4 text-white">
+    
+                <!-- header -->
+                <div class="text-center pt-3 pb-2">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
+                    alt="Check" width="60">
+                  <h2 class="my-4">Task List</h2>
+                </div>
+
+                <!-- search box -->
+                <div class="search-container">
+                  <input type="text" id="searchBox" placeholder="Search Task">
+                </div>
+                
+                <!-- Add tasks -->
+                <div class="add-task-box">
+                  <div class="add-task-container">
+                    <div class="input-container">
+                      <label for="taskDesc">Task Description</label>
+                      <input type="text" id="taskDesc" class="task-input">
+                    </div>
+
+                    <div class="input-container" id="statusInput" style="display:none;">
+                      <label for="taskStatus">Status</label>
+                      <input type="text" id="taskStatus" class="task-input">
+                    </div>
+
+                    <div class="input-container">
+                      <label for="taskDue">Due Date</label>
+                      <input type="date" id="taskDue" class="task-input">
+                    </div>
+
+                    <div class="input-container">
+                      <label for="taskPriority">Priority</label>
+                      <select id="taskPriority" class="task-priority-input">
+                        <option value="High" selected>High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                      </select>
+                    </div>
+
+                    <!-- <div class="input-container">
+                      <label for="taskCategory">Category</label>
+                      <input type="text" id="taskCategory" class="task-input">
+                    </div> -->
+
+                  </div>
+                  <div id="addBtnBox">
+                    <label for="addTask"></label>
+                    <input type="button" id="addTask" value="Add Task" class="add-task-btn">
+                  </div>
+
+                  <div id="editBtnBox" class="hide">
+                    <label for="editTask"></label>
+                    <input type="button" id="editTask" value="Edit Task" class="add-task-btn">
+                  </div>
+                </div>
+    
+                <!-- task list -->
+                <table id="tasksList" class="table text-white mb-0">
+                  <thead>
+                    <tr>
+                      <!-- <th scope="col">Task ID</th> -->
+                      <th scope="col">Task Description</th>
+                      <th scope="col">Created On</th>
+                      <th scope="col">Created By</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Due On</th>
+                      <th scope="col">Priority</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+    
+    
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/task_manager.js"></script>
+</body>
+</html>
